@@ -1,0 +1,383 @@
+2020-04-24 20:24:30 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:24:30 DataHandler.py[line:146] INFO [(1, '注册登录')]
+2020-04-24 20:24:30 DataHandler.py[line:64] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 20:24:30 DataHandler.py[line:67] INFO [['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23767}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 19时44分53秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "f72725c7586075486497c4d4a5530384", "code": "00", "userid": 23767, "login_time": "2020-04-24 19:44:54"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 19时44分54秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23767}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 19时44分55秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:24:30 DataHandler.py[line:76] INFO [(1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '"code": "00"', 'userid||userid": (\\d+)'), (2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '"token":', 'token||token": "(\\w+)'), (3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '"code": "00"', None)]
+2020-04-24 20:24:30 interface_test.py[line:39] INFO register
+2020-04-24 20:24:30 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:24:30 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:24:30 DataHandler.py[line:88] INFO unique_num1
+2020-04-24 20:24:30 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：112
+2020-04-24 20:24:30 DataHandler.py[line:91] INFO 112
+2020-04-24 20:24:30 DataHandler.py[line:95] INFO num1
+2020-04-24 20:24:30 DataHandler.py[line:98] INFO {'unique_num1': '112', 'num1': 112}
+2020-04-24 20:24:30 api_request.py[line:31] INFO http://39.106.41.11:8080/register/
+2020-04-24 20:24:30 api_request.py[line:33] INFO {"username": "liguofang202004112", "password": "123456789abc", "email": "sed@qq.com"}
+2020-04-24 20:24:30 interface_test.py[line:58] INFO {"code": "00", "userid": 23768}
+2020-04-24 20:24:30 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:24:31 interface_test.py[line:87] INFO 125.0
+2020-04-24 20:24:31 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:24:31 interface_test.py[line:39] INFO login
+2020-04-24 20:24:31 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:24:31 interface_test.py[line:46] INFO "token":
+2020-04-24 20:24:31 DataHandler.py[line:103] INFO md5('123456789abc')
+2020-04-24 20:24:31 DataHandler.py[line:105] INFO d266f2f31cf903c870027659030e967e
+2020-04-24 20:24:31 DataHandler.py[line:108] INFO {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:24:31 api_request.py[line:31] INFO http://39.106.41.11:8080/login/
+2020-04-24 20:24:31 api_request.py[line:33] INFO {"username": "liguofang202004112", "password": "d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:24:31 interface_test.py[line:58] INFO {"token": "50c16a9059cf2f89a39f26d2102c2264", "code": "00", "userid": 23768, "login_time": "2020-04-24 20:24:31"}
+2020-04-24 20:24:31 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:24:31 interface_test.py[line:87] INFO 62.47258186340332
+2020-04-24 20:24:31 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:24:31 interface_test.py[line:39] INFO create
+2020-04-24 20:24:31 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:24:31 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:24:31 api_request.py[line:31] INFO http://39.106.41.11:8080/create/
+2020-04-24 20:24:31 api_request.py[line:33] INFO {"userid": 23768, "token": "50c16a9059cf2f89a39f26d2102c2264", "title": "python", "content": "python port test"}
+2020-04-24 20:24:32 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23768}
+2020-04-24 20:24:32 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:24:32 interface_test.py[line:87] INFO 107.12766647338867
+2020-04-24 20:24:32 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:24:32 Mail.py[line:35] INFO True
+2020-04-24 20:24:32 Mail.py[line:37] INFO True
+2020-04-24 20:24:33 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:36:09 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:36:09 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:36:09 DataHandler.py[line:65] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 20:36:09 DataHandler.py[line:68] INFO test_cases_wb_row_values():[['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23768}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时24分30秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "50c16a9059cf2f89a39f26d2102c2264", "code": "00", "userid": 23768, "login_time": "2020-04-24 20:24:31"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时24分31秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23768}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时24分32秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:36:09 interface_test.py[line:39] INFO register
+2020-04-24 20:36:09 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:36:09 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:36:09 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:36:09 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：113
+2020-04-24 20:36:09 DataHandler.py[line:92] INFO var_value: 113
+2020-04-24 20:36:09 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:36:09 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '113', 'num1': 113}
+2020-04-24 20:36:09 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/register/
+2020-04-24 20:36:09 api_request.py[line:33] INFO 请求的数据是;{"username": "liguofang202004113", "password": "123456789abc", "email": "sed@qq.com"}
+2020-04-24 20:36:09 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:36:09 interface_test.py[line:87] INFO 109.31634902954102
+2020-04-24 20:36:10 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:36:10 interface_test.py[line:107] INFO 从响应中提取的变量名：userid，变量值为23769
+2020-04-24 20:36:10 interface_test.py[line:109] INFO 生成的全局变量名：globe_vars[userid]=23769
+2020-04-24 20:36:10 interface_test.py[line:39] INFO login
+2020-04-24 20:36:10 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:36:10 interface_test.py[line:46] INFO 断言关键字："token":
+2020-04-24 20:36:10 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:36:10 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:36:10 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:36:10 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/login/
+2020-04-24 20:36:10 api_request.py[line:33] INFO 请求的数据是;{"username": "liguofang202004113", "password": "d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:36:10 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:36:10 interface_test.py[line:87] INFO 93.75929832458496
+2020-04-24 20:36:10 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:36:10 interface_test.py[line:107] INFO 从响应中提取的变量名：token，变量值为9992d15959f8c4b2dcbdba7391b171f3
+2020-04-24 20:36:10 interface_test.py[line:109] INFO 生成的全局变量名：globe_vars[token]=9992d15959f8c4b2dcbdba7391b171f3
+2020-04-24 20:36:10 interface_test.py[line:39] INFO create
+2020-04-24 20:36:10 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:36:10 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:36:10 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/create/
+2020-04-24 20:36:10 api_request.py[line:33] INFO 请求的数据是;{"userid": 23769, "token": "9992d15959f8c4b2dcbdba7391b171f3", "title": "python", "content": "python port test"}
+2020-04-24 20:36:11 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:36:11 interface_test.py[line:87] INFO 107.00750350952148
+2020-04-24 20:36:11 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:36:11 Mail.py[line:37] INFO True
+2020-04-24 20:36:12 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:43:36 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:43:36 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:43:36 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:43:36 DataHandler.py[line:65] INFO 注册登录
+2020-04-24 20:43:36 DataHandler.py[line:68] INFO [['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23769}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时36分09秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "9992d15959f8c4b2dcbdba7391b171f3", "code": "00", "userid": 23769, "login_time": "2020-04-24 20:36:10"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时36分10秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23769}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时36分10秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:43:36 DataHandler.py[line:77] INFO [(1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '"code": "00"', 'userid||userid": (\\d+)'), (2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '"token":', 'token||token": "(\\w+)'), (3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '"code": "00"', None)]
+2020-04-24 20:43:36 interface_test.py[line:39] INFO register
+2020-04-24 20:43:36 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:43:36 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:43:36 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:43:36 DataHandler.py[line:27] INFO 114
+2020-04-24 20:43:36 DataHandler.py[line:92] INFO var_value: 114
+2020-04-24 20:43:36 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:43:36 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '114', 'num1': 114}
+2020-04-24 20:43:36 api_request.py[line:31] INFO http://39.106.41.11:8080/register/
+2020-04-24 20:43:36 api_request.py[line:33] INFO {"username": "liguofang202004114", "password": "123456789abc", "email": "sed@qq.com"}
+2020-04-24 20:43:36 interface_test.py[line:58] INFO {"code": "00", "userid": 23770}
+2020-04-24 20:43:37 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:43:37 interface_test.py[line:87] INFO 101.05395317077637
+2020-04-24 20:43:37 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:43:37 interface_test.py[line:39] INFO login
+2020-04-24 20:43:37 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:43:37 interface_test.py[line:46] INFO "token":
+2020-04-24 20:43:37 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:43:37 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:43:37 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:43:37 api_request.py[line:31] INFO http://39.106.41.11:8080/login/
+2020-04-24 20:43:37 api_request.py[line:33] INFO {"username": "liguofang202004114", "password": "d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:43:37 interface_test.py[line:58] INFO {"token": "01dd8399e981bf131c9c953d9187790f", "code": "00", "userid": 23770, "login_time": "2020-04-24 20:43:37"}
+2020-04-24 20:43:37 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:43:38 interface_test.py[line:87] INFO 83.99438858032227
+2020-04-24 20:43:38 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:43:38 interface_test.py[line:39] INFO create
+2020-04-24 20:43:38 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:43:38 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:43:38 api_request.py[line:31] INFO http://39.106.41.11:8080/create/
+2020-04-24 20:43:38 api_request.py[line:33] INFO {"userid": 23770, "token": "01dd8399e981bf131c9c953d9187790f", "title": "python", "content": "python port test"}
+2020-04-24 20:43:38 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23770}
+2020-04-24 20:43:38 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:43:38 interface_test.py[line:87] INFO 130.8150291442871
+2020-04-24 20:43:39 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:43:39 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:43:39 Mail.py[line:37] INFO True
+2020-04-24 20:43:40 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:46:12 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:46:12 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:46:12 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:46:12 DataHandler.py[line:65] INFO 注册登录
+2020-04-24 20:46:12 DataHandler.py[line:68] INFO [['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23770}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时43分37秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "01dd8399e981bf131c9c953d9187790f", "code": "00", "userid": 23770, "login_time": "2020-04-24 20:43:37"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时43分37秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23770}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时43分38秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:46:12 DataHandler.py[line:77] INFO [(1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '"code": "00"', 'userid||userid": (\\d+)'), (2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '"token":', 'token||token": "(\\w+)'), (3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '"code": "00"', None)]
+2020-04-24 20:46:12 interface_test.py[line:39] INFO register
+2020-04-24 20:46:12 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:46:12 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:46:12 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:46:12 DataHandler.py[line:27] INFO 115
+2020-04-24 20:46:12 DataHandler.py[line:92] INFO var_value: 115
+2020-04-24 20:46:12 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:46:12 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '115', 'num1': 115}
+2020-04-24 20:46:12 api_request.py[line:31] INFO http://39.106.41.11:8080/register/
+2020-04-24 20:46:12 api_request.py[line:33] INFO {"username": "liguofang202004115", "password": "123456789abc", "email": "sed@qq.com"}
+2020-04-24 20:46:12 interface_test.py[line:58] INFO {"code": "00", "userid": 23771}
+2020-04-24 20:46:13 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:46:13 interface_test.py[line:87] INFO 91.92347526550293
+2020-04-24 20:46:13 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:46:13 interface_test.py[line:107] INFO userid
+2020-04-24 20:46:13 interface_test.py[line:108] INFO 23771
+2020-04-24 20:46:13 interface_test.py[line:110] INFO userid
+2020-04-24 20:46:13 interface_test.py[line:111] INFO 23771
+2020-04-24 20:46:13 interface_test.py[line:39] INFO login
+2020-04-24 20:46:13 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:46:13 interface_test.py[line:46] INFO "token":
+2020-04-24 20:46:13 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:46:13 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:46:13 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:46:13 api_request.py[line:31] INFO http://39.106.41.11:8080/login/
+2020-04-24 20:46:13 api_request.py[line:33] INFO {"username": "liguofang202004115", "password": "d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:46:13 interface_test.py[line:58] INFO {"token": "2b600495e26192f77ad6cda60c53ef00", "code": "00", "userid": 23771, "login_time": "2020-04-24 20:46:13"}
+2020-04-24 20:46:13 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:46:13 interface_test.py[line:87] INFO 78.03463935852051
+2020-04-24 20:46:13 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:46:13 interface_test.py[line:107] INFO token
+2020-04-24 20:46:13 interface_test.py[line:108] INFO 2b600495e26192f77ad6cda60c53ef00
+2020-04-24 20:46:13 interface_test.py[line:110] INFO token
+2020-04-24 20:46:13 interface_test.py[line:111] INFO 2b600495e26192f77ad6cda60c53ef00
+2020-04-24 20:46:13 interface_test.py[line:39] INFO create
+2020-04-24 20:46:13 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:46:13 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:46:13 api_request.py[line:31] INFO http://39.106.41.11:8080/create/
+2020-04-24 20:46:13 api_request.py[line:33] INFO {"userid": 23771, "token": "2b600495e26192f77ad6cda60c53ef00", "title": "python", "content": "python port test"}
+2020-04-24 20:46:14 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23771}
+2020-04-24 20:46:14 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:46:14 interface_test.py[line:87] INFO 109.45987701416016
+2020-04-24 20:46:14 Excel.py[line:53] INFO 测试用例集
+2020-04-24 20:46:14 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:46:14 Mail.py[line:37] INFO True
+2020-04-24 20:46:15 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:52:57 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:52:57 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:52:57 DataHandler.py[line:65] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 20:52:57 DataHandler.py[line:68] INFO test_cases_wb_row_values():[['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23771}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时46分12秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "2b600495e26192f77ad6cda60c53ef00", "code": "00", "userid": 23771, "login_time": "2020-04-24 20:46:13"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时46分13秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23771}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时46分14秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:52:57 interface_test.py[line:39] INFO register
+2020-04-24 20:52:57 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:52:57 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:52:57 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:52:57 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：116
+2020-04-24 20:52:57 DataHandler.py[line:92] INFO var_value: 116
+2020-04-24 20:52:57 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:52:57 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '116', 'num1': 116}
+2020-04-24 20:52:57 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/register/
+2020-04-24 20:52:57 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004116\", \"password\": \"123456789abc\", \"email\": \"sed@qq.com\"}"
+2020-04-24 20:52:57 interface_test.py[line:58] INFO {"code": "00", "userid": 23772}
+2020-04-24 20:52:58 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:52:58 interface_test.py[line:87] INFO 96.03261947631836
+2020-04-24 20:52:58 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:52:58 interface_test.py[line:107] INFO userid
+2020-04-24 20:52:58 interface_test.py[line:108] INFO 23772
+2020-04-24 20:52:58 interface_test.py[line:110] INFO userid
+2020-04-24 20:52:58 interface_test.py[line:111] INFO 23772
+2020-04-24 20:52:58 interface_test.py[line:39] INFO login
+2020-04-24 20:52:58 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:52:58 interface_test.py[line:46] INFO "token":
+2020-04-24 20:52:58 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:52:58 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:52:58 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:52:58 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/login/
+2020-04-24 20:52:58 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004116\", \"password\": \"d266f2f31cf903c870027659030e967e\"}"
+2020-04-24 20:52:58 interface_test.py[line:58] INFO {"token": "c8aefc2694504ef55eed171a33f5e008", "code": "00", "userid": 23772, "login_time": "2020-04-24 20:52:58"}
+2020-04-24 20:52:58 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:52:58 interface_test.py[line:87] INFO 74.96094703674316
+2020-04-24 20:52:59 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:52:59 interface_test.py[line:107] INFO token
+2020-04-24 20:52:59 interface_test.py[line:108] INFO c8aefc2694504ef55eed171a33f5e008
+2020-04-24 20:52:59 interface_test.py[line:110] INFO token
+2020-04-24 20:52:59 interface_test.py[line:111] INFO c8aefc2694504ef55eed171a33f5e008
+2020-04-24 20:52:59 interface_test.py[line:39] INFO create
+2020-04-24 20:52:59 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:52:59 interface_test.py[line:46] INFO "code": "00"
+2020-04-24 20:52:59 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/create/
+2020-04-24 20:52:59 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"userid\": 23772, \"token\": \"c8aefc2694504ef55eed171a33f5e008\", \"title\": \"python\", \"content\": \"python port test\"}"
+2020-04-24 20:52:59 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23772}
+2020-04-24 20:52:59 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:52:59 interface_test.py[line:87] INFO 103.02352905273438
+2020-04-24 20:53:00 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:53:00 Mail.py[line:37] INFO True
+2020-04-24 20:53:01 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:55:16 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:55:16 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:55:16 DataHandler.py[line:65] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 20:55:16 DataHandler.py[line:68] INFO test_cases_wb_row_values():[['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23772}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时52分58秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "c8aefc2694504ef55eed171a33f5e008", "code": "00", "userid": 23772, "login_time": "2020-04-24 20:52:58"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时52分58秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23772}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时52分59秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:55:16 interface_test.py[line:39] INFO register
+2020-04-24 20:55:16 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:55:16 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:55:16 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:55:16 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：117
+2020-04-24 20:55:16 DataHandler.py[line:92] INFO var_value: 117
+2020-04-24 20:55:16 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:55:16 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '117', 'num1': 117}
+2020-04-24 20:55:16 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/register/
+2020-04-24 20:55:16 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004117\", \"password\": \"123456789abc\", \"email\": \"sed@qq.com\"}"
+2020-04-24 20:55:16 interface_test.py[line:58] INFO {"code": "00", "userid": 23773}
+2020-04-24 20:55:17 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:55:17 interface_test.py[line:87] INFO 163.9871597290039
+2020-04-24 20:55:18 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:55:18 interface_test.py[line:107] INFO userid
+2020-04-24 20:55:18 interface_test.py[line:108] INFO 23773
+2020-04-24 20:55:18 interface_test.py[line:110] INFO userid
+2020-04-24 20:55:18 interface_test.py[line:111] INFO 23773
+2020-04-24 20:55:18 interface_test.py[line:39] INFO login
+2020-04-24 20:55:18 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:55:18 interface_test.py[line:46] INFO 断言关键字："token":
+2020-04-24 20:55:18 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:55:18 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:55:18 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:55:18 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/login/
+2020-04-24 20:55:18 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004117\", \"password\": \"d266f2f31cf903c870027659030e967e\"}"
+2020-04-24 20:55:18 interface_test.py[line:58] INFO {"token": "3ffad5deffc7440548aaa92e19d872fa", "code": "00", "userid": 23773, "login_time": "2020-04-24 20:55:18"}
+2020-04-24 20:55:18 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:55:18 interface_test.py[line:87] INFO 86.9748592376709
+2020-04-24 20:55:19 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:55:19 interface_test.py[line:107] INFO token
+2020-04-24 20:55:19 interface_test.py[line:108] INFO 3ffad5deffc7440548aaa92e19d872fa
+2020-04-24 20:55:19 interface_test.py[line:110] INFO token
+2020-04-24 20:55:19 interface_test.py[line:111] INFO 3ffad5deffc7440548aaa92e19d872fa
+2020-04-24 20:55:19 interface_test.py[line:39] INFO create
+2020-04-24 20:55:19 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:55:19 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:55:19 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/create/
+2020-04-24 20:55:19 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"userid\": 23773, \"token\": \"3ffad5deffc7440548aaa92e19d872fa\", \"title\": \"python\", \"content\": \"python port test\"}"
+2020-04-24 20:55:19 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23773}
+2020-04-24 20:55:19 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:55:19 interface_test.py[line:87] INFO 186.04016304016113
+2020-04-24 20:55:20 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:55:20 Mail.py[line:37] INFO True
+2020-04-24 20:55:21 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 20:57:57 Excel.py[line:53] INFO 设定的sheet名称是：测试用例集
+2020-04-24 20:57:57 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 20:57:57 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 20:57:57 DataHandler.py[line:65] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 20:57:57 DataHandler.py[line:68] INFO test_cases_wb_row_values():[['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23773}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时55分17秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "3ffad5deffc7440548aaa92e19d872fa", "code": "00", "userid": 23773, "login_time": "2020-04-24 20:55:18"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时55分18秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23773}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时55分19秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 20:57:57 DataHandler.py[line:77] INFO test_cases:[(1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '"code": "00"', 'userid||userid": (\\d+)'), (2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '"token":', 'token||token": "(\\w+)'), (3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '"code": "00"', None)]
+2020-04-24 20:57:57 interface_test.py[line:39] INFO register
+2020-04-24 20:57:57 interface_test.py[line:41] INFO {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 20:57:57 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:57:57 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 20:57:57 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：118
+2020-04-24 20:57:57 DataHandler.py[line:92] INFO var_value: 118
+2020-04-24 20:57:57 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 20:57:57 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '118', 'num1': 118}
+2020-04-24 20:57:57 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/register/
+2020-04-24 20:57:57 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004118\", \"password\": \"123456789abc\", \"email\": \"sed@qq.com\"}"
+2020-04-24 20:57:57 interface_test.py[line:58] INFO {"code": "00", "userid": 23774}
+2020-04-24 20:57:58 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:57:58 interface_test.py[line:87] INFO 101.9434928894043
+2020-04-24 20:57:58 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 20:57:58 interface_test.py[line:107] INFO userid
+2020-04-24 20:57:58 interface_test.py[line:108] INFO 23774
+2020-04-24 20:57:58 interface_test.py[line:110] INFO userid
+2020-04-24 20:57:58 interface_test.py[line:111] INFO 23774
+2020-04-24 20:57:58 interface_test.py[line:39] INFO login
+2020-04-24 20:57:58 interface_test.py[line:41] INFO {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 20:57:58 interface_test.py[line:46] INFO 断言关键字："token":
+2020-04-24 20:57:58 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 20:57:58 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 20:57:58 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 20:57:58 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/login/
+2020-04-24 20:57:58 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004118\", \"password\": \"d266f2f31cf903c870027659030e967e\"}"
+2020-04-24 20:57:58 interface_test.py[line:58] INFO {"token": "58831c017c9ee84ce23fcb032fff4916", "code": "00", "userid": 23774, "login_time": "2020-04-24 20:57:58"}
+2020-04-24 20:57:58 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:57:58 interface_test.py[line:87] INFO 74.94616508483887
+2020-04-24 20:57:59 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 20:57:59 interface_test.py[line:107] INFO token
+2020-04-24 20:57:59 interface_test.py[line:108] INFO 58831c017c9ee84ce23fcb032fff4916
+2020-04-24 20:57:59 interface_test.py[line:110] INFO token
+2020-04-24 20:57:59 interface_test.py[line:111] INFO 58831c017c9ee84ce23fcb032fff4916
+2020-04-24 20:57:59 interface_test.py[line:39] INFO create
+2020-04-24 20:57:59 interface_test.py[line:41] INFO  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 20:57:59 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 20:57:59 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/create/
+2020-04-24 20:57:59 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"userid\": 23774, \"token\": \"58831c017c9ee84ce23fcb032fff4916\", \"title\": \"python\", \"content\": \"python port test\"}"
+2020-04-24 20:57:59 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23774}
+2020-04-24 20:57:59 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 20:57:59 interface_test.py[line:87] INFO 106.95409774780273
+2020-04-24 20:57:59 Excel.py[line:53] INFO 设定的sheet名称是：测试用例集
+2020-04-24 20:58:00 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 20:58:00 Mail.py[line:37] INFO True
+2020-04-24 20:58:01 Mail.py[line:56] INFO 邮件发送成功
+2020-04-24 21:00:48 Excel.py[line:53] INFO 设定的sheet名称是：测试用例集
+2020-04-24 21:00:48 DataHandler.py[line:147] INFO test_case_to_run_sheet_names: [(1, '注册登录')]
+2020-04-24 21:00:48 DataHandler.py[line:61] INFO D:\test_interface\TestData\接口测试数据.xlsx
+2020-04-24 21:00:48 DataHandler.py[line:65] INFO 设定的测试用例sheet名称是：注册登录
+2020-04-24 21:00:48 DataHandler.py[line:68] INFO test_cases_wb_row_values():[['序号', '接口名称', '请求数据', '执行返回结果', '断言内容', '执行结果', '请求后提取的变量', '执行耗时时间（ms）', '知否执行', '测试执行时间', None], [1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '{"code": "00", "userid": 23774}', '"code": "00"', '成功', 'userid||userid": (\\d+)', '0', 'y', '2020年04月24日 20时57分58秒', None], [2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '{"token": "58831c017c9ee84ce23fcb032fff4916", "code": "00", "userid": 23774, "login_time": "2020-04-24 20:57:58"}', '"token":', '成功', 'token||token": "(\\w+)', '0', 'y', '2020年04月24日 20时57分58秒', None], [3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '{"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23774}', '"code": "00"', '成功', None, '0', 'y', '2020年04月24日 20时57分59秒', None], ['总用例执行条数：3，成功用例条数：3,失败用例条数：0', None, None, None, None, None, None, None, None, None, None]]
+2020-04-24 21:00:48 DataHandler.py[line:77] INFO test_cases:[(1, 'register', '{"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}', '"code": "00"', 'userid||userid": (\\d+)'), (2, 'login', '{"username": "liguofang202004${num1}", "password":"${md5(\'123456789abc\')}"}', '"token":', 'token||token": "(\\w+)'), (3, 'create', ' {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}', '"code": "00"', None)]
+2020-04-24 21:00:48 interface_test.py[line:39] INFO 接口名称: register
+2020-04-24 21:00:48 interface_test.py[line:41] INFO 请求body: {"username":"liguofang202004${unique_num1}", "password":"123456789abc","email":"sed@qq.com"}
+2020-04-24 21:00:48 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 21:00:48 DataHandler.py[line:89] INFO var_name:unique_num1
+2020-04-24 21:00:48 DataHandler.py[line:27] INFO 全局唯一数当前生成的值是：119
+2020-04-24 21:00:48 DataHandler.py[line:92] INFO var_value: 119
+2020-04-24 21:00:48 DataHandler.py[line:96] INFO var_name: num1
+2020-04-24 21:00:48 DataHandler.py[line:99] INFO global_vars: {'unique_num1': '119', 'num1': 119}
+2020-04-24 21:00:48 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/register/
+2020-04-24 21:00:48 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004119\", \"password\": \"123456789abc\", \"email\": \"sed@qq.com\"}"
+2020-04-24 21:00:49 interface_test.py[line:58] INFO {"code": "00", "userid": 23775}
+2020-04-24 21:00:49 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 21:00:49 interface_test.py[line:87] INFO 109.47394371032715
+2020-04-24 21:00:49 interface_test.py[line:99] INFO userid||userid": (\d+)
+2020-04-24 21:00:49 interface_test.py[line:107] INFO userid
+2020-04-24 21:00:49 interface_test.py[line:108] INFO 23775
+2020-04-24 21:00:49 interface_test.py[line:110] INFO userid
+2020-04-24 21:00:49 interface_test.py[line:111] INFO 23775
+2020-04-24 21:00:49 interface_test.py[line:39] INFO 接口名称: login
+2020-04-24 21:00:49 interface_test.py[line:41] INFO 请求body: {"username": "liguofang202004${num1}", "password":"${md5('123456789abc')}"}
+2020-04-24 21:00:49 interface_test.py[line:46] INFO 断言关键字："token":
+2020-04-24 21:00:49 DataHandler.py[line:104] INFO var_pass: md5('123456789abc')
+2020-04-24 21:00:49 DataHandler.py[line:106] INFO eval(var_pass): d266f2f31cf903c870027659030e967e
+2020-04-24 21:00:49 DataHandler.py[line:109] INFO requestBody after replace: {"username": "liguofang202004${num1}", "password":"d266f2f31cf903c870027659030e967e"}
+2020-04-24 21:00:49 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/login/
+2020-04-24 21:00:49 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"username\": \"liguofang202004119\", \"password\": \"d266f2f31cf903c870027659030e967e\"}"
+2020-04-24 21:00:49 interface_test.py[line:58] INFO {"token": "5b0e481b19fd22f5737c78551ee247c1", "code": "00", "userid": 23775, "login_time": "2020-04-24 21:00:49"}
+2020-04-24 21:00:50 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 21:00:50 interface_test.py[line:87] INFO 65.54055213928223
+2020-04-24 21:00:50 interface_test.py[line:99] INFO token||token": "(\w+)
+2020-04-24 21:00:50 interface_test.py[line:107] INFO token
+2020-04-24 21:00:50 interface_test.py[line:108] INFO 5b0e481b19fd22f5737c78551ee247c1
+2020-04-24 21:00:50 interface_test.py[line:110] INFO token
+2020-04-24 21:00:50 interface_test.py[line:111] INFO 5b0e481b19fd22f5737c78551ee247c1
+2020-04-24 21:00:50 interface_test.py[line:39] INFO 接口名称: create
+2020-04-24 21:00:50 interface_test.py[line:41] INFO 请求body:  {"userid":${userid}, "token": "${token}", "title":"python", "content":"python port test"}
+2020-04-24 21:00:50 interface_test.py[line:46] INFO 断言关键字："code": "00"
+2020-04-24 21:00:50 api_request.py[line:31] INFO 请求的接口地址是:http://39.106.41.11:8080/create/
+2020-04-24 21:00:50 api_request.py[line:33] INFO "\u8bf7\u6c42\u7684\u6570\u636e\u662f;{\"userid\": 23775, \"token\": \"5b0e481b19fd22f5737c78551ee247c1\", \"title\": \"python\", \"content\": \"python port test\"}"
+2020-04-24 21:00:50 interface_test.py[line:58] INFO {"data": [{"content": "python port test", "title": "python"}], "code": "00", "userid": 23775}
+2020-04-24 21:00:50 DataHandler.py[line:50] INFO 断言成功
+2020-04-24 21:00:51 interface_test.py[line:87] INFO 111.00602149963379
+2020-04-24 21:00:51 Excel.py[line:53] INFO 设定的sheet名称是：测试用例集
+2020-04-24 21:00:51 Mail.py[line:35] INFO os.path.exists(attach_file_path):True
+2020-04-24 21:00:51 Mail.py[line:37] INFO True
+2020-04-24 21:00:52 Mail.py[line:56] INFO 邮件发送成功
